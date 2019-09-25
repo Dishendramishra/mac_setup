@@ -6,4 +6,6 @@ https://github.com/qparis/FinderOpenTerminal
 
 Anaconda PATH on fish shell
 
-'''export PATH="/Users/dishendra/anaconda3/bin/:$PATH"'''
+```
+export PATH="/Users/dishendra/anaconda3/bin/:$PATH"
+```
