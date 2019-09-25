@@ -26,3 +26,10 @@ sudo find / -name ".DS_Store"  -exec rm {} \;
 
 
 At the Password: prompt, carefully enter your admin password, since nothing shows up on the screen, and hit the return key. When the default prompt, usually the $ sign, pops up again, quit the Terminal app, restart, and open a Finder window, set it up the way you want, and click on Use as Defaults button. All subsequently opened or created folders should retain that view. 
+
+
+
+# Mac OS X: Launch Terminal from keyboard shortcut
+
+https://claudiodangelis.com/osx/2012/09/27/osx-launch-terminal-from-shortcut.html
+
