@@ -23,8 +23,6 @@ Launch the Terminal app (in /Applications/Utilities/), copy & paste this command
 ```shell
 sudo find / -name ".DS_Store"  -exec rm {} \;
 ```
-
-
 At the Password: prompt, carefully enter your admin password, since nothing shows up on the screen, and hit the return key. When the default prompt, usually the $ sign, pops up again, quit the Terminal app, restart, and open a Finder window, set it up the way you want, and click on Use as Defaults button. All subsequently opened or created folders should retain that view. 
 
 
@@ -72,3 +70,8 @@ echo "	sed -i -e  '/h/ s/^export[[:space:]]no_proxy/#export no_proxy/' ~/.bash_p
 echo "	sed -i -e  '/h/ s/^export[[:space:]]NO_PROXY/#export NO_PROXY/' ~/.bash_profile " >> ~/.bash_profile
 echo '}' >> ~/.bash_profile
 ```
+
+## Themes
+
+https://www.gnome-look.org/p/1350613/ install both files  
+https://www.gnome-look.org/p/1275087/ install dark-solid
