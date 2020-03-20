@@ -73,6 +73,6 @@ echo '}' >> ~/.bash_profile
 
 ## Themes
 
-https://www.gnome-look.org/p/1350613/ install both files  
-https://www.gnome-look.org/p/1275087/ install dark-solid  
-https://www.gnome-look.org/p/1084939/ downdload, extract use install script to install, change theme in tweak-tool reload gnome 
+**Icon theme** https://www.gnome-look.org/p/1305429/ install both files  
+**Theme** https://www.gnome-look.org/p/1275087/ install dark-solid  
+**Cursor Theme** https://www.gnome-look.org/p/1084939/ downdload, extract use install script to install, change theme in tweak-tool reload gnome 
