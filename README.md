@@ -171,9 +171,16 @@ echo 'fi' >> ~/.bash_profile
 
 ```
 
+Testing exofastv2
+
+```shell
+cd $EXOFAST_PATH/examples/hat3
+idl -e "fithat3"
+```
+
 ---
 
-  <br>
+<br>
 
 ### Mac Customisation
 
