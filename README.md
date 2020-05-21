@@ -1,21 +1,20 @@
-Window Tiling
-https://www.macupdate.com/app/mac/61314/tiles
+## Index:
 
-Open in terminal Context-Menu
-https://github.com/qparis/FinderOpenTerminal
+1. [Mac Change Global View Options](#Mac-Change-Global-View-Options)
+2. [Proxy ON/OFF Scripts](#Proxy-ON/OFF-Scripts)
+3. [Installing IDL](#Installing-IDL)
+4. [Installing Exofastv2](#Installing-Exofastv2)
+5. [Mac Customisation](#Mac-Customisation)
 
-Anaconda PATH on fish shell
+---
 
-```
-export PATH="/Users/dishendra/anaconda3/bin/:$PATH"
-```
 
 
 ### Mac Change Global View Options
 
+---
+
 Use as Defaults is supposed to carry over to all newly opened Finder windows, but it doesn't change any previously opened windows. If you want to revert all previously opened windows to that view, follow these steps:
-
-
 
 Launch the Terminal app (in /Applications/Utilities/), copy & paste this command into the window that pops up, and hit the return key:
 
@@ -25,13 +24,14 @@ sudo find / -name ".DS_Store"  -exec rm {} \;
 ```
 At the Password: prompt, carefully enter your admin password, since nothing shows up on the screen, and hit the return key. When the default prompt, usually the $ sign, pops up again, quit the Terminal app, restart, and open a Finder window, set it up the way you want, and click on Use as Defaults button. All subsequently opened or created folders should retain that view. 
 
+---
 
 
-### Mac OS X: Launch Terminal from keyboard shortcut
 
-https://claudiodangelis.com/osx/2012/09/27/osx-launch-terminal-from-shortcut.html
+### Proxy ON/OFF Scripts
 
-### Proxy ON/OFF
+---
+
 :warning: Doesn't Works on `fish` shell use `ohmyzsh` instead.
 
 Works if `~/.bash_profile` contains environment variables as shown below:
@@ -71,8 +71,14 @@ echo "	sed -i -e  '/h/ s/^export[[:space:]]NO_PROXY/#export NO_PROXY/' ~/.bash_p
 echo '}' >> ~/.bash_profile
 ```
 
+---
+
+
+
 ## Installing IDL
+
 **Prerequesties**  
+
 * Xquartz  
 using brew: `brew cask install xquartz`  
 **OR**  
@@ -96,7 +102,7 @@ sudo /usr/local/itt/install
 
 **Installing idl libraries**
 
-libraries: install coyote and astron
+libraries: coyote and astron
 
 ```shell
 cd ~
@@ -114,7 +120,7 @@ rm -rf ./pro
 
 If you encounter following error:
 
-<img src="/Users/paras/Documents/mac_setup/images/zlib_error.png" style="zoom:50%;" />
+<img src="./images/zlib_error.png" style="zoom:50%;" />
 
 The execute following command to fix it.
 
@@ -122,3 +128,77 @@ The execute following command to fix it.
 sudo rm -rf /usr/local/itt/idl706/bin/bin.darwin.x86_64/libz.1.dylib
 ```
 
+---
+
+
+
+### Installing Exofastv2
+
+---
+
+**Dependencies**:
+
+* IDLAstro
+
+  ```shell
+  mkdir -p $HOME/idl
+  cd $HOME/idl
+  git clone https://github.com/wlandsman/IDLAstro.git
+  ```
+
+  
+
+**Installing Exofastv2**
+
+```shell
+cd $HOME/idl
+git clone https://github.com/jdeast/EXOFASTv2.git
+```
+
+
+
+Then execute following commands to define necessary paths in your `bash_profile`
+
+```shell
+echo -e '\n' >> ~/.bash_profile
+echo '# if IDL_PATH is not defined, add EXOFAST_PATH and subdirectories to the default IDL path' >> ~/.bash_profile
+echo 'if [ -z "$IDL_PATH" ]; then' >> ~/.bash_profile
+echo 'IDL_PATH="<IDL_DEFAULT>:+${EXOFAST_PATH}" ; export IDL_PATH' >> ~/.bash_profile
+echo 'else' >> ~/.bash_profile
+echo '# otherwise, append EXOFAST_PATH and all subdirectories to your IDL_PATH' >> ~/.bash_profile
+echo 'IDL_PATH="${IDL_PATH}:+${EXOFAST_PATH}" ; export IDL_PATH' >> ~/.bash_profile
+echo 'fi' >> ~/.bash_profile
+
+```
+
+---
+
+
+
+### Mac Customisation
+
+---
+
+* **Launch Terminal from keyboard shortcut**
+
+  https://claudiodangelis.com/osx/2012/09/27/osx-launch-terminal-from-shortcut.html
+
+
+
+* **Window Tiling**
+  https://www.macupdate.com/app/mac/61314/tiles
+
+  
+
+* **Open in terminal Context-Menu**
+  https://github.com/qparis/FinderOpenTerminal
+
+  
+
+* **Anaconda PATH on fish shell**
+
+  ```shell
+  export PATH="/Users/dishendra/anaconda3/bin/:$PATH"
+  ```
+
+---
