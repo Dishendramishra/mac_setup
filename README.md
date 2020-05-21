@@ -8,7 +8,7 @@
 
 ---
 
-
+<br>
 
 ### Mac Change Global View Options
 
@@ -26,7 +26,7 @@ At the Password: prompt, carefully enter your admin password, since nothing show
 
 ---
 
-
+<br>
 
 ### Proxy ON/OFF Scripts
 
@@ -73,7 +73,7 @@ echo '}' >> ~/.bash_profile
 
 ---
 
-
+<br>
 
 ## Installing IDL
 
@@ -130,7 +130,7 @@ sudo rm -rf /usr/local/itt/idl706/bin/bin.darwin.x86_64/libz.1.dylib
 
 ---
 
-
+<br>
 
 ### Installing Exofastv2
 
@@ -146,7 +146,7 @@ sudo rm -rf /usr/local/itt/idl706/bin/bin.darwin.x86_64/libz.1.dylib
   git clone https://github.com/wlandsman/IDLAstro.git
   ```
 
-  
+    
 
 **Installing Exofastv2**
 
@@ -173,7 +173,7 @@ echo 'fi' >> ~/.bash_profile
 
 ---
 
-
+  <br>
 
 ### Mac Customisation
 
