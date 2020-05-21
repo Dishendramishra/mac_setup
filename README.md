@@ -71,8 +71,54 @@ echo "	sed -i -e  '/h/ s/^export[[:space:]]NO_PROXY/#export NO_PROXY/' ~/.bash_p
 echo '}' >> ~/.bash_profile
 ```
 
-## Themes
+## Installing IDL
+**Prerequesties**  
+* Xquartz  
+using brew: `brew cask install xquartz`  
+**OR**  
+using dmg from xquartz webpage: [download](https://www.xquartz.org/)  
 
-**Icon theme** https://www.gnome-look.org/p/1305429/ install both files  
-**Theme** https://www.gnome-look.org/p/1275087/ install dark-solid  
-**Cursor Theme** https://www.gnome-look.org/p/1084939/ downdload, extract use install script to install, change theme in tweak-tool reload gnome 
+
+
+**Installing IDL**  
+
+Download from [here](https://drive.google.com/uc?id=1RBBZztZ3_W92uMUySzQ5RCAOYFB6uWiD&export=download)  
+then `cd` to directory where you have downloaded the idl and execute following commands:  
+
+```shell
+sudo tar -xvf idl_mac.tar --directory /usr/local/
+cd /usr/local/itt
+sudo chmod +x /usr/local/itt/install
+sudo /usr/local/itt/install
+```
+
+
+
+**Installing idl libraries**
+
+libraries: install coyote and astron
+
+```shell
+cd ~
+wget https://idlastro.gsfc.nasa.gov/ftp/coyote_astron.tar.gz
+wget https://idlastro.gsfc.nasa.gov/ftp/astron.zip
+mkdir astron
+unzip ./astron.zip -d ./astron
+tar -xvf coyote_astron.tar.gz
+sudo mv ./astron/ /usr/local/itt/idl/lib/
+sudo mv ./pro/coyote/ /usr/local/itt/idl/lib/
+rm -rf ./pro
+```
+
+:warning:**Fixing zlib issue**
+
+If you encounter following error:
+
+<img src="/Users/paras/Documents/mac_setup/images/zlib_error.png" style="zoom:50%;" />
+
+The execute following command to fix it.
+
+```shell
+sudo rm -rf /usr/local/itt/idl706/bin/bin.darwin.x86_64/libz.1.dylib
+```
+
