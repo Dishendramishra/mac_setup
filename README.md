@@ -1,10 +1,11 @@
 ## Index:
 
 1. [Mac Change Global View Options](#Mac-Change-Global-View-Options)
-2. [Proxy ON/OFF Scripts](#Proxy-ON/OFF-Scripts)
-3. [Installing IDL](#Installing-IDL)
-4. [Installing Exofastv2](#Installing-Exofastv2)
-5. [Mac Customisation](#Mac-Customisation)
+2. [Installing oh-my-zsh](#Installing-oh-my-zsh)
+3. [Proxy ON/OFF Scripts](#Proxy-ON/OFF-Scripts)
+4. [Installing IDL](#Installing-IDL)
+5. [Installing Exofastv2](#Installing-Exofastv2)
+6. [Mac Customisation](#Mac-Customisation)
 
 ---
 
@@ -27,6 +28,23 @@ At the Password: prompt, carefully enter your admin password, since nothing show
 ---
 
 <br>
+
+### Installing oh-my-zsh
+```shell
+brew install zsh
+echo "no" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# adding plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+# adding plugins in zshrc
+sed -i -e 's/plugins.*/plugins=(sudo git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)/' ~/.zshrc
+
+# changing default shell to zsh
+chsh -s $(which zsh)
+```
 
 ### Proxy ON/OFF Scripts
 
