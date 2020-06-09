@@ -31,7 +31,6 @@ At the Password: prompt, carefully enter your admin password, since nothing show
 
 ### Installing oh-my-zsh
 ```shell
-brew install zsh
 echo "no" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # adding plugins
@@ -40,7 +39,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 # adding plugins in zshrc
-sed -i -e 's/plugins.*/plugins=(sudo git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)/' ~/.zshrc
+sed -i -e 's/^plugins=.*/plugins=(sudo git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)/' ~/.zshrc
+# =======================================================================
 
 # changing default shell to zsh
 chsh -s $(which zsh)
