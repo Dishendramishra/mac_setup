@@ -150,6 +150,16 @@ sudo rm -rf /usr/local/itt/idl706/bin/bin.darwin.x86_64/libz.1.dylib
 
 <br>
 
+:warning:**Fixing GUI issue**
+```shell
+cd /opt/X11/lib
+sudo cp libXt.6.dylib libXt.6.dylib.bak
+cd flat_namespace/
+sudo cp libXt.6.dylib ../.
+
+```
+
+
 ### Installing Exofastv2
 
 ---
